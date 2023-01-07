@@ -1,0 +1,7 @@
+En gros un site de référencement d'entreprises,
+on pourra les noter, et donner des commentaires
+mais quand je dis commentaires, il faudrait pouvoir délimiter
+les commentaires par rapport à leur service et ceux pour dire 
+c'ets quoi l'ambiance de boulôt 
+
+Il faut donc un crud pour les users et pour les entreprises 
