@@ -31,7 +31,7 @@ const enterpriseSchema = new mongoose.Schema(
             type: [
                 {
                     commenterId: String,
-                    commenterPseudo: String,
+                    commenterName: String,
                     text:String,
                     timestamp: Number,
                 }

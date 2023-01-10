@@ -30,6 +30,14 @@ const userSchema = new mongoose.Schema(
             max:500,
         },
 
+        likes: {
+            type: [String]
+        },
+
+        dislikes: {
+            type: [String]
+          },
+
         
     },
     {timestamps:true,}

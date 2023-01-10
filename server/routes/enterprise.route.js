@@ -4,7 +4,7 @@ const enterpriseController = require ("../controllers/enterprise.controller")
 const multer = require("multer")
 const upload = multer
 
-router.get("/", enterpriseController.readEnterprise)
+router.get("/", enterpriseController.getEnterprise)
 router.post("/", upload.single("file"), enterpriseController.createEnterprise)
 router.put("/:id", enterpriseController.updateEnterprise)
 router.delete("/:id", enterpriseController.deleteEnterprise)
