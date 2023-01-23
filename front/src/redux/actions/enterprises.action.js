@@ -58,15 +58,15 @@ export const addEnterprise = (data) => {
     }
 }
 
-export const updateEnterprise = (enterpriseId, name, socialSiege, capital) => {
+export const updateEnterprise = (enterpriseId, name, socialSiege, capital, description) => {
     return(dispatch) => {
         return axios({
             method: "put",
             url: `${process.env.REACT_APP_API_URL}api/enterprise/${enterpriseId}`,
-            data: {name, socialSiege, capital},
+            data: {name, socialSiege, capital, description},
         })
         .then((res) => {
-            dispatch({ type:UPDATE_ENTERPRISE, payload: {name, socialSiege,capital}})
+            dispatch({ type:UPDATE_ENTERPRISE, payload: {name, socialSiege,capital, description}})
         })
         .catch((err) => {
             window.alert(err)

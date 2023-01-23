@@ -2,6 +2,12 @@ const mongoose = require("mongoose")
 
 const enterpriseSchema = new mongoose.Schema(
     {
+
+        posterId: {
+            type: String,
+            required: true
+        },
+        
         enterpriseName: {
             type:String,
             required:true 
@@ -13,6 +19,11 @@ const enterpriseSchema = new mongoose.Schema(
         },
 
         capital: {
+            type: String,
+            required:true,
+        },
+
+        description: {
             type: String,
             required:true,
         },
