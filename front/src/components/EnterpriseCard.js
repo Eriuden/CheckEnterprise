@@ -3,10 +3,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { updateEnterprise } from "../redux/actions/enterprises.action";
 import { isEmpty } from "../utils";
 import DeleteEnterprise from "./DeleteEnterprise";
+import LikeDislikeButtons from "./LikeDislikeButtons";
 import Comment from "./comment/comment";
 
 
-export default function EnterpriseCard({props}) {
+export default function EnterpriseCard({enterprise}) {
   const [isLoading, setIsLoading] = useState(true)
   const [isUpdated, setIsUpdated] = useState(false)
   const [textUpdate, setTextUpdate] = enterpriseData(null)
@@ -27,7 +28,7 @@ export default function EnterpriseCard({props}) {
   }, [enterprisesData])
 
   return (
-    <li key={props._id}>
+    <li key={enterprise._id}>
         {isLoading ? (
             <i className="fas-fa-spinner fa-spin"></i>
         ) : (
@@ -103,7 +104,7 @@ export default function EnterpriseCard({props}) {
                         <span>{enterpriseData.comments.length}</span>
                     </div>
 
-                    <likeDislikeButtons enterprise = {enterprise}/>
+                    <LikeDislikeButtons enterprise = {enterprise}/>
                     {showComments && <Comment enterprise={enterprise} />}
                 </div>
             </>

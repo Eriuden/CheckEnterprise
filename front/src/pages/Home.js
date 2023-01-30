@@ -40,7 +40,7 @@ export default function Home() {
           <ul>
             {!isEmpty(enterprisesData[0]) && 
             enterprisesData.map((enterprise) => {
-              return <EnterpriseCard Props={enterprise} key={enterprise._id}/>
+              return <EnterpriseCard props={enterprise} key={enterprise._id}/>
             })}
           </ul>   
       </div>

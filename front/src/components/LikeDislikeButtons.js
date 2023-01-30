@@ -1,9 +1,9 @@
 import React, {useContext, useEffect, useState} from 'react'
-import { uidContext } from '../uidContext'
+import { uidContext } from './uidContext'
 import Popup from "reactjs-popup"
-import { likeEnterprise, unlikeEnterprise, dislikeEnterprise, undislikeEnterprise } from '../../redux/actions/enterprises.action'
+import { likeEnterprise, unlikeEnterprise, dislikeEnterprise, undislikeEnterprise } from '../redux/actions/enterprises.action'
 
-export default function likeDislikeButtons({enterprise}) {
+export default function LikeDislikeButtons({enterprise}) {
   const [liked, setLiked] = useState(false)
   const [disliked, setDisliked] = useState(false)
   const uid = useContext(uidContext)
